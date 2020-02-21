@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    What can I do for you?
+  </title>
+
+  <meta name="supported-color-schemes" content="light dark">
+  <meta name="description" content="frede.info is the website of Stefan Frede.">
+  <meta name="author" content="Stefan Frede">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Stefan Frede">
+
+  <style>
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --text-background: hsl(0, 0%, 100%);
+      --text-color: hsl(100, 0%, 0%);
+      --background: hsl(216, 33%, 97%);
+      --gradient-left: hsl(214, 15%, 91%);
+      --gradient-right: hsl(216, 33%, 97%);
+      --gradient-bottom: hsl(214, 15%, 91%);
+      --gradient-top: hsl(209, 70%, 50%);
+      --on-background: hsl(210, 24%, 16%);
+      --ts-one: rgba(245, 247, 250, 0.1);
+      --ts-two: rgba(31,41, 51, 0.5);
+    }
+
+    body {
+      align-items: center;
+      background-color: var(--background);
+      background-image: linear-gradient(
+        to right, var(--gradient-left) 0%,
+        var(--gradient-right) 100%
+      );
+      color: var(--on-background);
+      display: flex;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      justify-content: center;
+      min-height: 100vh;
+      min-width: 100vw;
+      text-shadow: -1px -1px 1px var(--ts-one), 1px 1px 1px var(--ts-two);
+    }
+
+    h1 {
+      background: var(--text-background);
+      color: var(--text-color);
+      display: inline-block;
+      font-size: 5.063rem;
+      font-weight: 700;
+      letter-spacing: -0.05rem;
+      margin: 0;
+      padding: 0 1rem;
+      mix-blend-mode: multiply;
+      position: relative;
+      text-decoration: none;
+      transition: all .15s ease;
+    }
+
+    h1::before {
+      background: linear-gradient(180deg, var(--gradient-top) -10%,
+        var(--gradient-bottom));
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 0;
+      mix-blend-mode: screen;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: hsl(210, 24%, 16%);
+        --gradient-left: hsl(209, 20%, 25%);
+        --gradient-right: hsl(210, 24%, 16%);
+        --on-background: hsl(214, 15%, 91%);
+        --text-background: hsl(100, 0%, 0%);
+        --text-color: hsl(0, 0%, 100%);
+        --ts-one: rgba(31,41, 51, 0.1);
+        --ts-two: rgba(245, 247, 250, 0.5);
+      }
+
+      h1 {
+        mix-blend-mode: lighten;
+      }
+
+      h1::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <h1>
+      What can I do for you?
+    </h1>
+  </main>
+</body>
+</html>
